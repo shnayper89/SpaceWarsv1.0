@@ -10,19 +10,29 @@ public class Movement {
     public  double rockets;
 
 
-    public void movement(String key){
-        if ((this.axisY < 5)&&(key.equals("w"))){
-    this.axisY = axisY + 1;
+    public void moveUp(){
+        if (this.axisY < 10) {
+            this.axisY = axisY + 1;
+            System.out.println(axisX + "      " + axisY);
         }
-        else if ((this.axisX >= 1)&&(key.equals("s"))){
-            this.axisY = axisY - 1;
-        }
-        else if ((this.axisX < 10)&&(key.equals("d"))){
-            this.axisX = axisX + 1;
-        }
-        else if ((this.axisX >= 1)&&(key.equals("a"))){
-            this.axisX = axisX - 1;
-        }
-        System.out.println(axisX + "      " + axisY);
     }
+    public void moveDown(){
+        if (this.axisY > 1) {
+            this.axisY = axisY - 1;
+            System.out.println(axisX + "      " + axisY);
+        }
+    }
+    public void moveLeft() {
+        if (this.axisX > 1) {
+            this.axisX = axisX - 1;
+            System.out.println(axisX + "      " + axisY);
+        }
+    }
+    public void moveRight(){
+        if (this.axisX < 10) {
+            this.axisX = axisX + 1;
+            System.out.println(axisX + "      " + axisY);
+        }
+    }
+
 }
