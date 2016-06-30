@@ -6,9 +6,6 @@ import Movement.Movement;
  * Created by spirit on 6/30/16.
  */
 public class Spaceship extends Movement {
-    public String name;
-    public int xp, axisX, axisY;
-    public  double rockets;
 
     public Spaceship(String name, int xp, int rockets, int axisX, int axisY) {
         this.name = name;
